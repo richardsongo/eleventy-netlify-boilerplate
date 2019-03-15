@@ -1,6 +1,6 @@
 <section class="container">
 	{% for post in postslist | reverse %}
-		<article{% if post.url == url %} class="media" data-current="current item"{% endif %}>
+		<article{% if post.url == url %}  data-current="current item"{% endif %} class="media">
 		
 
 {% if thumbnail %}
