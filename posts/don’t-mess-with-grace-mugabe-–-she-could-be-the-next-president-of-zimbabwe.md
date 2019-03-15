@@ -1,6 +1,8 @@
 ---
 title: Don’t mess with Grace Mugabe – she could be the next president of Zimbabwe
+subtitle: This is a subtitle
 date: 2019-02-23T03:14:35.651Z
+thumbnail: /static/img/_82832332_82830810.jpg
 summary: >-
   For two decades, she was a demure companion at her husband’s side. Now she has
   taken the stage as a fearsome political figure in her own right. Can Grace
