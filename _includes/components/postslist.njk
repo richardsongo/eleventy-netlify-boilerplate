@@ -3,11 +3,11 @@
 		<article{% if post.url == url %}  data-current="current item"{% endif %} class="media">
 		
 
-{% if post.thumbnail %}
+{% if post.data.thumbnail %}
 <img
-srcset="{{ post.thumbnail }} 320w, {{ post.thumbnail }} 550w"
+srcset="{{ post.data.thumbnail }} 320w, {{ post.data.thumbnail }} 550w"
 sizes= "(max-width: 550px) calc(100vw - 120px), 550px"
-src="{{ post.thumbnail }}"
+src="{{ post.data.thumbnail }}"
 class="mr-3"
 alt="">
 {% endif %}
