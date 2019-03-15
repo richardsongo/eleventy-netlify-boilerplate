@@ -1,7 +1,20 @@
 <section>
 	{% for post in postslist | reverse %}
-		<article{% if post.url == url %} data-current="current item"{% endif %}>
-			<h3>
+		<article{% if post.url == url %} class="media" data-current="current item"{% endif %}>
+		
+
+{% if thumbnail %}
+<img
+srcset="{{ thumbnail }} 320w, {{ thumbnail }} 550w"
+sizes= "(max-width: 550px) calc(100vw - 120px), 550px"
+src="{{ thumbnail }}"
+class="mr-3"
+alt="">
+{% endif %}
+
+		
+		<div class="media-body">
+			<h3 class="media-title">
 				<a href="{{ post.url | url }}">
 					{% if post.data.title %}
 						{{ post.data.title }}
@@ -30,6 +43,7 @@
 					{% endfor %}
 				</p>
 			{% endif %}
+			</div>
 		</article>
 	{% endfor %}
 </section>
