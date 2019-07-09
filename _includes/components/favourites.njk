@@ -1,6 +1,6 @@
 <section class="container">
 <div class="row">
-	{% for post in postslist.slice(0, 2)  | reverse %}
+	{% for post in favourites.slice(0, 2)  | reverse %}
   
 <article {% if post.url == url %}  data-current="current item"{% endif %} class="col-lg-3">
 		
