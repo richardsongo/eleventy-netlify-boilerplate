@@ -1,19 +1,19 @@
 <section class="container">
 	{% for post in postslist | reverse %}
-		<article{% if post.url == url %}  data-current="current item"{% endif %} class="media">
+		<article{% if post.url == url %}  data-current="current item"{% endif %} class="row">
 		
-
+<div class="col-lg-6">
 {% if post.data.thumbnail %}
 <img
 srcset="{{ post.data.thumbnail }} 320w, {{ post.data.thumbnail }} 550w"
 sizes= "(max-width: 550px) calc(100vw - 120px), 550px"
 src="{{ post.data.thumbnail }}"
-class="mr-3"
+class="img-fluid"
 alt="">
 {% endif %}
-
+</div>
 		
-		<div class="media-body">
+		<div class="media-body col-lg-6">
 			<h3 class="media-title">
 				<a href="{{ post.url | url }}">
 					{% if post.data.title %}
@@ -46,4 +46,5 @@ alt="">
 			</div>
 		</article>
 	{% endfor %}
+
 </section>
