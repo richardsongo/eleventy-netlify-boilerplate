@@ -2,44 +2,41 @@
 <div class="row">
 	{% for post in favourites.slice(0, 4)  | reverse %}
   
-<article {% if post.url == url %}  data-current="current item"{% endif %} class="col-lg-3">
-		
+		<article {% if post.url == url %}  data-current="current item"{% endif %} class="col-lg-3">
 
-{% if post.data.thumbnail %}
-  <img
-    srcset="{{ post.data.thumbnail }} 320w, {{ post.data.thumbnail }} 550w"
-    sizes= "(max-width: 550px) calc(100vw - 120px), 550px"
-    src="{{ post.data.thumbnail }}"
-    class="mr-3 img-fluid"
-    alt=""
-  >
-{% endif %}
+			{% if post.data.thumbnail %}
+			  <img
+			    srcset="{{ post.data.thumbnail }} 320w, {{ post.data.thumbnail }} 550w"
+			    sizes= "(max-width: 550px) calc(100vw - 120px), 550px"
+			    src="{{ post.data.thumbnail }}"
+			    class="img-fluid"
+			    alt=""
+			  >
+			{% endif %}
 
-<h3 class="media-title">
-  <a href="{{ post.url | url }}">
-    {% if post.data.title %}
-      {{ post.data.title }}
-    {% else %}
-      Untitled
-    {% endif %}
-  </a>
-</h3>
+			<h3 class="media-title">
+			  <a href="{{ post.url | url }}">
+			    {% if post.data.title %}
+			      {{ post.data.title }}
+			    {% else %}
+			      Untitled
+			    {% endif %}
+			  </a>
+			</h3>
 
-{% if post.data.tags %}
-  <h3>
-    {% for tag in post.data.tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-      <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-      {%- endif -%}
-    {% endfor %}
-  </h3>
-{% endif %}
+			{% if post.data.tags %}
+			  <h3>
+			    {% for tag in post.data.tags %}
+			      {%- if tag != "post" -%}
+				{% set tagUrl %}/tags/{{ tag }}/{% endset %}
+			      <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+			      {%- endif -%}
+			    {% endfor %}
+			  </h3>
+			{% endif %}
 
-<a href="{{ post.url | url }}"><h3>Read more</h3></a>
+			<a href="{{ post.url | url }}"><h3>Read more</h3></a>
 
-      
-			</div>
 		</article>
 	{% endfor %}
   </div>
