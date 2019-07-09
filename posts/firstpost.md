@@ -1,7 +1,10 @@
 ---
-title: This is my first post
+title: Bring to the table win-win survival strategies to ensure proactive domination
+subtitle: 'Nanotechnology immersion along the information '
+date: 2015-01-01T00:00:00.000Z
+thumbnail: >-
+  /static/img/4636204_6_98ea_des-manifestants-opposes-au-president-pierre_0c0e3ec40a29dbbcf6a29e8e9843afd1-copy.jpg
 summary: Why contemplating our mortality can be a powerful catalyst for change
-date: 2015-01-01
 tags:
   - post
   - tech
